@@ -1,0 +1,7 @@
+<h1>Login</h1>
+
+<form action="" method="post">
+    {% csrf_token %}  <!--# django: against attack -->
+    {{ form.as_p }}   <!--# as_paragraph -->
+    <button type="submit">Login</button>
+</form>

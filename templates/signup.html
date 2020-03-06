@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Sign Up</h1>
+
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}  <!--# django: against attack -->
+    {{ form.as_p }}   <!--# as_paragraph -->
+    <button type="submit">Sign Up</button>
+</form>
+
+{% endblock content%}
